@@ -17,3 +17,9 @@ redux and redux-thunk- for performing asynchronous tasks using redux
 A route is a section of express code that associates a HTTP verb and a URL pattern and a function that
 is called to handle that pattern. 
 In HTTP verb it is like GET, Post, Delete, PUT etc.
+
+---- Controllers ----
+The contollers are dedicated for the functions that accept the requests and response.
+
+Models- For keeping all the schemas in it.
+Schema- Defining what are document will look like in mongoDB, as data is stored in documents in mongoDB 
