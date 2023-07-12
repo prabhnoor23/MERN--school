@@ -5,7 +5,7 @@ import cors from 'cors';
 import studentRoutes from './routes/student.js';
 //hi there sample git commit
 const app = express();
-app.use('students', studentRoutes);
+app.use('/students', studentRoutes);
 
 
 app.use(bodyParser.json({limit: "20mb", extended:true}));
