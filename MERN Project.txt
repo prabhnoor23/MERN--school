@@ -1,0 +1,19 @@
+
+---- SERVER ----
+cors- for cross origin requests
+express- framework
+body-parser- for send post requests
+mongoose- for creating models
+nodemon- reset server in case of any change
+
+---- Client ----
+axios- for making API requests
+moment- library for working with time and date
+react-file-base64- for converting images
+redux and redux-thunk- for performing asynchronous tasks using redux
+
+
+---- Routes ----
+A route is a section of express code that associates a HTTP verb and a URL pattern and a function that
+is called to handle that pattern. 
+In HTTP verb it is like GET, Post, Delete, PUT etc.
