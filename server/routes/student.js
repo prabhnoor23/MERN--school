@@ -1,13 +1,11 @@
 import express from 'express';
-
+import { getStudents } from '../controllers/student';
 
 const router = express.Router();
 
 //adding a route
 
-router.get('/',(req, res)=>{
-    res.send('Router is working');
-});
+router.get('/', );
 
 
 //exporting the router
