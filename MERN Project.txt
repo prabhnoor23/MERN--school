@@ -23,3 +23,6 @@ The contollers are dedicated for the functions that accept the requests and resp
 
 Models- For keeping all the schemas in it.
 Schema- Defining what are document will look like in mongoDB, as data is stored in documents in mongoDB 
+
+---- Await ----
+When we intend to run an operation that will take some time to complete, like saving data to database or fetching data from the database, then we use "Await and Async".
