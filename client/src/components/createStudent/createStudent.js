@@ -1,13 +1,10 @@
 //create students
-
 import React, {useState} from 'react';
 import Box from '@material-ui/core/Box';
-
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
 import { makeStyles } from '@material-ui/core';
-
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +24,10 @@ export default function CreateStudent() {
   });
 
   const createStudent = () =>{
-    
+    // whenever the user hits the create button, the below event will be fired. Client-side is running on 3000 port and server-side is 
+    //running on 5000 port.
+    axios.post('http://localhost:5000/students', student  )
+  // The above event will make the data go from the back-end to the front-end
   }
   return (
     <> <h2> Create Student </h2>
