@@ -22,6 +22,9 @@ function createData(name, calories, fat, carbs, protein) {
   
   export default function BasicTable() {
     return (
+
+      <>
+      <h2>ALL Students</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -51,5 +54,6 @@ function createData(name, calories, fat, carbs, protein) {
           </TableBody>
         </Table>
       </TableContainer>
+      </>
     );
   }
