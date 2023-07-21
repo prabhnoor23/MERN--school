@@ -3,8 +3,10 @@ import './App.css';
 import Student from './components/showStudent/showStudent.js';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 import Create from './components/createStudent/createStudent.js';
+import useStyles from './styles';
 
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
 
