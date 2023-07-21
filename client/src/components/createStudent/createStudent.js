@@ -26,6 +26,9 @@ export default function CreateStudent() {
     section: ''
   });
 
+  const createStudent = () =>{
+    
+  }
   return (
     <> <h2> Create Student </h2>
       <Box
@@ -39,12 +42,22 @@ export default function CreateStudent() {
       >
 
 
-        <TextField id="outlined-basic" label="Registration No." variant="outlined" value={student.regNo}/>
-        <TextField id="outlined-basic" label="Name" variant="outlined" value={student.studentName}/>
-        <TextField id="outlined-basic" label="Grade" variant="outlined" value={student.grade}/>
-        <TextField id="outlined-basic" label="Section" variant="outlined" value={student.section}/>
+        <TextField id="outlined-basic" label="Registration No." variant="outlined" value={student.regNo} onChange={(event) =>{
+          setStudent({ ...student, regNo: event.target.value})
+        }}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" value={student.studentName} onChange={(event) =>{
+          setStudent({ ...student, studentName: event.target.value})
+        }}/>
+        <TextField id="outlined-basic" label="Grade" variant="outlined" value={student.grade} onChange={(event) =>{
+          setStudent({ ...student, grade: event.target.value})
+        }}/>
+        <TextField id="outlined-basic" label="Section" variant="outlined" value={student.section} onChange={(event) =>{
+          setStudent({ ...student, section: event.target.value})
+        }}/>
 
-        <Button variant="contained" color='primary'>Create</Button>
+        <Button variant="contained" color='primary'  onClick={createStudent}>
+          Create
+         </Button>
 
       </Box>
     </>
