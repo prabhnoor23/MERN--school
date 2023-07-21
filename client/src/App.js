@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Student from './components/showStudent/showStudent.js';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import Create from './components/createStudent/createStudent.js';
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
                 </AppBar>
               </Grid>
               <Grid item xs={12} sm={4}>
-
+              <AppBar className={classes.appBar} position= "static" color="inherit">
+                  <Create />
+                </AppBar>
               </Grid>
 
             </Grid>
