@@ -17,11 +17,13 @@ export default function BasicTextFields() {
       noValidate
       autoComplete="off"
     >
+        //text fields
+        
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      
+
       <Button variant="contained" color='primary'>Create</Button>
       
     </Box>
