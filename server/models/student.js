@@ -7,10 +7,9 @@ const studentSchema = mongoose.Schema({
     section : {
         type: String,
         default: 'A'
-    } 
+    }
 });
 
 const student = mongoose.model('student', studentSchema);
 
 export default student;
-``
