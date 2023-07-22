@@ -4,7 +4,7 @@ const studentSchema = mongoose.Schema({
     regNo: Number,
     studentName: String,
     grade: String,
-    section : {
+    section: {
         type: String,
         default: 'A'
     }
