@@ -1,11 +1,13 @@
 import express from 'express';
-import { getStudents } from '../controllers/student';
+import { getStudents, createStudent } from '../controllers/student';
+import student from './models/student.js';
 
 const router = express.Router();
 
 //adding a route
 
-router.get('/', );
+router.get('/', getStudents);
+router.post('/', createStudent);
 
 
 //exporting the router
