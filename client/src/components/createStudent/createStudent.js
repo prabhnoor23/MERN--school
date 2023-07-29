@@ -26,7 +26,8 @@ export default function CreateStudent() {
   const createStudent = () =>{
     // whenever the user hits the create button, the below event will be fired. Client-side is running on 3000 port and server-side is 
     //running on 5000 port.
-    axios.post('http://localhost:5000/students', student  )
+    axios.post('http://localhost:5000/students', student)
+    console.log(student)
   // The above event will make the data go from the back-end to the front-end
   }
   return (
@@ -42,7 +43,7 @@ export default function CreateStudent() {
       >
 
 
-        <TextField id="outlined-basic" label="Registration No." variant="outlined" value={student.regNo} onChange={(event) =>{
+        <TextField id="outlined-basic" label="Registeration No." variant="outlined" value={student.regNo} onChange={(event) =>{
           setStudent({ ...student, regNo: event.target.value})
         }}/>
         <TextField id="outlined-basic" label="Name" variant="outlined" value={student.studentName} onChange={(event) =>{
@@ -50,6 +51,8 @@ export default function CreateStudent() {
         }}/>
         <TextField id="outlined-basic" label="Grade" variant="outlined" value={student.grade} onChange={(event) =>{
           setStudent({ ...student, grade: event.target.value})
+          // console.log(event.target.value);
+          // console.log("*************");
         }}/>
         <TextField id="outlined-basic" label="Section" variant="outlined" value={student.section} onChange={(event) =>{
           setStudent({ ...student, section: event.target.value})

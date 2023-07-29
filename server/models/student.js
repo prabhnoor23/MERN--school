@@ -4,12 +4,11 @@ const studentSchema = mongoose.Schema({
     regNo: Number,
     studentName: String,
     grade: String,
-    section: {
-        type: String,
-        default: 'A'
-    }
+    section: String
+    // subjects:[String]
+      
 });
 
-const student = mongoose.model('student', studentSchema);
+const studentsc = mongoose.model('student', studentSchema);
 
-export default student;
+export default studentsc;
