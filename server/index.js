@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import studentRoutes from './routes/student.js';
+import { pass } from './credentials.js';
 //hi there sample git commit
 const app = express();
 
@@ -31,7 +32,7 @@ app.use('/students', studentRoutes);
 
 app.use(cors());
 
-const CONNECTION_URL = 'mongodb+srv://prabh:PrabhnooR2300@cluster0.nfwgfdx.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://prabh:'+ pass +'@cluster0.nfwgfdx.mongodb.net/?retryWrites=true&w=majority';
 
 const PORT = process.env.PORT || 5000;
 
