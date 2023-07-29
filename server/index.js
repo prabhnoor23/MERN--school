@@ -5,15 +5,33 @@ import cors from 'cors';
 import studentRoutes from './routes/student.js';
 //hi there sample git commit
 const app = express();
-app.use('/students', studentRoutes);
-
 
 app.use(bodyParser.json({limit: "20mb", extended:true}));
 app.use(bodyParser.urlencoded({limit: "20mb", extended:true}));
 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept'
+    );
+    next();
+  });
+app.use('/students', studentRoutes);
+// app.use(function(req, res, next) {
+//     res.header('Access-Control-Allow-Origin', 'http://localhost:5000');
+//     res.header(
+//       'Access-Control-Allow-Headers',
+//       'Origin, X-Requested-With, Content-Type, Accept'
+//     );
+//     next();
+//   });
+
+
+
 app.use(cors());
 
-const CONNECTION_URL = 'mongodb+srv://prabh:PrabhnooR2300@cluster0.kavj6sa.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://prabh:PrabhnooR2300@cluster0.nfwgfdx.mongodb.net/?retryWrites=true&w=majority';
 
 const PORT = process.env.PORT || 5000;
 
