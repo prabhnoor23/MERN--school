@@ -18,6 +18,13 @@ app.use(function(req, res, next) {
     );
     next();
   });
+
+  app.use(cors({
+    origin: 'http://localhost:3000', // Adjust the allowed origin(s) as needed
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Include DELETE here
+  }));
+
+
 app.use('/students', studentRoutes);
 // app.use(function(req, res, next) {
 //     res.header('Access-Control-Allow-Origin', 'http://localhost:5000');

@@ -18,7 +18,7 @@ export default function ShowStudent() {
   const [studentsList, setStudentList] = useState([]);
 
   const deleteStudent = (id) =>{
-    axios.delete(`https://localhost:5000/students/${id}`).then( () =>{
+    axios.delete(`http://localhost:5000/students/${id}`).then( () =>{
       window.location.reload(false);
     })
   }
